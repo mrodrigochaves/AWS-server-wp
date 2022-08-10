@@ -1,14 +1,20 @@
-#!/bin/bash
 # ATUALIZAR REPO
 sudo apt update -y 
 # INSTALAR NGINX
 sudo apt install -y nginx
 # INSTALAR ~PHP
-sudo apt-get install software-properties-common -y
-sudo add-apt-repository ppa:ondrej/php && sudo apt update -y 
-sudo apt install -y php-fpm php-mysql
-sudo apt install -y php7.4-curl php7.4-gd php7.4-mbstring php7.4-zip php7.4-imagick php7.4-dom
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php8.0 libapache2-mod-php8.0
+sudo systemctl restart apache2
+sudo apt update
+sudo apt install php8.0-fpm libapache2-mod-fcgid
+sudo a2enmod proxy_fcgi setenvif
+sudo a2enconf php8.0-fpm
+systemctl restart apache2
 sudo apt install -y php8.0-curl php8.0-gd php8.0-mbstring php8.0-zip php8.0-imagick php8.0-dom
+sudo apt install php8.0-mysql php8.0-gd
 # ADICIONAR REPO ~LETSENCRYPT E ATUALIZAR
 sudo apt-get install software-properties-common 
 sudo apt update -y 
