@@ -90,3 +90,10 @@
     na console da AWS copie o ip público da EC2
     cole no browser
     termine a configuração do Wordpress
+
+## Criar Internet Gateway, Atachar na VPC e Criar uma Rota
+
+- VPC 
+  Internet Gateway: igw-wp| Action: Attach to VPC (vpc-wp)
+- VPC 
+  Route Table / Routes / Edit routes | Add route: 0.0.0.0/0 - Target: Internet Gateway (igw-wp)
