@@ -93,7 +93,10 @@
 
 ## Criar Internet Gateway, Atachar na VPC e Criar uma Rota
 
-- VPC 
-  Internet Gateway: igw-wp| Action: Attach to VPC (vpc-wp)
-- VPC 
-  Route Table / Routes / Edit routes | Add route: 0.0.0.0/0 - Target: Internet Gateway (igw-wp)
+    - VPC 
+      Internet Gateway: igw-wp| 
+            Action: Attach to VPC (vpc-wp)
+      Route Table 
+            Routes
+            Edit routes 
+            Add route: 0.0.0.0/0 - Target: Internet Gateway (igw-wp)
