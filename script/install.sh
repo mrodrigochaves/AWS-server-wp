@@ -23,7 +23,7 @@ sudo apt install -y certbot
 # INSTALAR PYTHON CERTBOT
 sudo apt install certbot python3-certbot-nginx 
 # BAIXAR CONFIGURACAO BASE DO WORDPRESS PARA NGINX
-wget https://raw.githubusercontent.com/mrodrigochaves/AWS-server-wp/main/script/nginx-server.conf
+wget https://raw.githubusercontent.com/mrodrigochaves/aws-server-wp/main/script/nginx-server.conf
 # COPIAR ARQUIVO DE CONFIGURACAO PARA "SITES AVAILABLE"
 sudo cp default.conf /etc/nginx/sites-available/wordpress
 # CRIANDO LINK DA CONFIGURACAO PARA "SITES ENABLED"
